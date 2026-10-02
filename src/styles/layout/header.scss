@@ -3,6 +3,7 @@
 .header {
   padding-block: rem(24px);
   padding-inline: fluid(24px, 48px, 375px, 768px);
+  border-bottom: var(--border);
 
   &__inner {
     display: flex;

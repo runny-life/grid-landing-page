@@ -30,3 +30,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.visually-hidden {
+  @include visually-hidden;
+}
