@@ -4,6 +4,9 @@
 /*Components*/
 @use "./components/logo";
 @use "./components/toggleMenu";
+@use "./components/stat-card";
 /*Layouts*/
 @use "./layout/header";
 @use "./layout/hero";
+@use "./layout/stats";
+@use "./layout/grid";

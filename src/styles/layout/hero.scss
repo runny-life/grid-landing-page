@@ -2,10 +2,15 @@
 
 .hero {
   display: flex;
-  align-items: start;
+  align-items: center;
+  justify-content: start;
   padding-block: rem(56px);
   padding-inline: fluid(32px, 48px, 375px, 768px);
   border-bottom: var(--border);
+
+  @include tablet {
+    min-height: rem(536px);
+  }
 
   &__content {
     display: flex;
@@ -26,5 +31,6 @@
     font-size: rem(17px);
     font-weight: 400;
     line-height: 1.65;
+    color: var(--color-blue-200);
   }
 }

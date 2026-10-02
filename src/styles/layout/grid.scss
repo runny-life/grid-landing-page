@@ -1,0 +1,11 @@
+@use "../helpers" as *;
+
+.grid {
+  display: grid;
+
+  &--2-cols {
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

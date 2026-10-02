@@ -1,0 +1,28 @@
+@use "../helpers" as *;
+
+.stats {
+  &__list {
+    display: grid;
+    height: 100%;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    border-bottom: var(--border);
+
+    @include tablet {
+      &:nth-child(odd) {
+        border-right: var(--border);
+      }
+    }
+
+    @include desktop {
+      &:nth-child(odd) {
+        border-left: var(--border);
+      }
+    }
+  }
+}
