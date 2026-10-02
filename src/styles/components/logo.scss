@@ -1,0 +1,36 @@
+@use "../helpers" as *;
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: rem(5px);
+  font-size: rem(14px);
+  font-weight: 500;
+  line-height: 1.42;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    width: 0;
+    height: rem(2px);
+    background-color: currentColor;
+    transition: width 0.2s;
+  }
+
+  @include hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  @include focus-visible(var(--color-neutral-0));
+
+  &__icon {
+    width: rem(12px);
+    height: rem(12px);
+    border-radius: 100%;
+    background-color: currentColor;
+  }
+}
