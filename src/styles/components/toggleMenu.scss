@@ -1,0 +1,49 @@
+@use "../helpers" as *;
+
+.toggle-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(24px);
+  height: rem(24px);
+  transition: opacity 0.2s;
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus-visible(var(--color-neutral-0));
+
+  &[aria-expanded="true"] {
+    .toggle-menu__icon--menu {
+      opacity: 0;
+      transform: rotate(90deg) scale(0.6);
+    }
+
+    .toggle-menu__icon--close {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transition: opacity 300ms ease,
+    transform 300ms ease;
+    will-change: opacity, transform;
+
+    &--menu {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+
+    &--close {
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.6);
+    }
+  }
+}
