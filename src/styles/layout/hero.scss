@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+.hero {
+  display: flex;
+  align-items: start;
+  padding-block: rem(56px);
+  padding-inline: fluid(32px, 48px, 375px, 768px);
+  border-bottom: var(--border);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(24px, 40px, 375px, 768px);
+    max-width: rem(397px);
+    width: 100%;
+  }
+
+  &__title {
+    font-size: fluid(44px, 60px, 375px, 768px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.05em;
+  }
+
+  &__description {
+    font-size: rem(17px);
+    font-weight: 400;
+    line-height: 1.65;
+  }
+}
