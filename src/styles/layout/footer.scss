@@ -1,0 +1,19 @@
+@use "../helpers" as *;
+
+.footer {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding-block: rem(24px);
+    padding-inline: fluid(24px, 48px, 375px, 768px);
+    font-size: rem(14px);
+    font-weight: 500;
+    line-height: 1.42;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
