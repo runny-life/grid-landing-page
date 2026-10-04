@@ -5,12 +5,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: rem(24px);
-  height: rem(24px);
-  transition: opacity 0.2s;
+  width: rem(40px);
+  height: rem(40px);
+  background-color: transparent;
+  border-radius: 100%;
+  transition: background-color 0.2s;
 
   @include hover {
-    opacity: 0.8;
+    background-color: var(--color-blue-400);
   }
 
   @include focus-visible(var(--color-neutral-0));
