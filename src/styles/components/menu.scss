@@ -1,0 +1,42 @@
+@use "../helpers" as *;
+
+.menu {
+  position: fixed;
+  top: rem(72px);
+  right: 0;
+  left: 0;
+  z-index: 70;
+  background-color: var(--color-blue-700);
+  padding: fluid(32px, 48px, 375px, 768px);
+  visibility: hidden;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease, visibility 0.2s linear 0.2s;
+
+  @include tablet {
+    transform: translateY(0) translateX(100%);
+    left: auto;
+    max-width: rem(396px);
+    width: 100%;
+    height: 100%;
+  }
+
+  &.is-active {
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.2s ease, visibility 0s linear 0s;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(5px);
+  }
+
+  &__link {
+    font-size: rem(32px);
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.06em;
+  }
+}
