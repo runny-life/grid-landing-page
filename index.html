@@ -31,6 +31,8 @@
         type="button"
         aria-label="Open menu"
         aria-expanded="false"
+        aria-controls="menu"
+        data-js-toggle-menu-button
       >
         <span class="toggle-menu__icon toggle-menu__icon--menu">
           <svg
@@ -166,7 +168,11 @@
       <p class="footer__register">Registered charity 12345678</p>
     </div>
   </footer>
-  <nav class="menu">
+  <nav
+    class="menu"
+    id="menu"
+    data-js-menu
+  >
     <ul class="menu__list">
       <li class="menu__item">
         <a
@@ -205,7 +211,10 @@
       </li>
     </ul>
   </nav>
-  <div class="overlay"></div>
+  <div
+    class="overlay"
+    data-js-overay
+  ></div>
   <script
     type="module"
     src="/src/scripts/app.js"
